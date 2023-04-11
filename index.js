@@ -2,6 +2,10 @@ const React = require("react");
 const { useState, useRef, useEffect } = require("react");
 const Canvas = require("react-canvas-component");
 
+
+
+
+
 const TARGET_TYPES = {
   CIRCLE: "circle",
   SQUARE: "square",
@@ -58,34 +62,6 @@ function App() {
     }
   }
 
-  // return (
-  //   <div>
-  //     <h1>Aim Training Game</h1>
-  //     <p>Score: {score}</p>
-  //     <Canvas
-  //       ref={canvasRef}
-  //       width={500}
-  //       height={500}
-  //       onClick={handleCanvasClick}
-  //       style={{ border: "1px solid black" }}
-  //     >
-  //       {targets.map((target) =>
-  //         target.type === TARGET_TYPES.CIRCLE ? (
-  //           <circle key={target.id} cx={target.x} cy={target.y} r={target.radius} fill={target.color} />
-  //         ) : (
-  //           <rect
-  //             key={target.id}
-  //             x={target.x - target.radius}
-  //             y={target.y - target.radius}
-  //             width={target.size}
-  //             height={target.size}
-  //             fill={target.color}
-  //           />
-  //         )
-  //       )}
-  //     </Canvas>
-  //   </div>
-  // );
 }
 
 module.exports = App;
