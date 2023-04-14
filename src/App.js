@@ -10,7 +10,7 @@ function Target(props) {
         position: 'absolute',
         top: props.target.y,
         left: props.target.x,
-        backgroundColor: 'red',
+        backgroundColor: '#eb347a',
         width: '50px',
         height: '50px',
         borderRadius: '50%',
@@ -75,13 +75,34 @@ function App() {
           justifyContent: 'center',
           alignItems: 'center',
           height: '100vh',
-          backgroundColor: 'black'
+          backgroundImage: 'url(https://static.vecteezy.com/system/resources/previews/005/266/448/original/retro-futuristic-background-free-vector.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         <div style={{ color: 'white' }}>
           <h2>Game Over</h2>
           <p>Your final score is {score}</p>
-          <button onClick={handleGameOverClick}>OK</button>
+          <button style={{
+            background: 'linear-gradient(180deg, #ff2a2a 0%, #e54d4d 100%)',
+    border: '1px solid #ff2a2a',
+    borderRadius: '5px',
+    color: '#fff',
+    cursor: 'pointer',
+    fontSize: '1.2rem',
+    padding: '0.5rem 1rem',
+    textTransform: 'uppercase',
+    textDecoration: 'none',
+    transition: 'all 0.2s ease-in-out',
+    letterSpacing: '0.05rem',
+    boxShadow: '1px 1px 5px rgba(0,0,0,0.2)',
+    outline: 'none',
+    marginRight: '1rem',
+    marginTop: '1rem',
+    fontFamily: 'sans-serif',
+    fontWeight: 'bold',
+    textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+    textRendering: 'optimizeLegibility'}}button onClick={handleGameOverClick}>OK</button>
         </div>
       </div>
     );
@@ -94,7 +115,9 @@ function App() {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: 'black'
+        backgroundImage: 'url(https://static.vecteezy.com/system/resources/previews/005/266/448/original/retro-futuristic-background-free-vector.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
       <div
@@ -103,7 +126,7 @@ function App() {
           width: '900px',
           height: '500px',
           position: 'relative',
-          backgroundColor: 'white'
+          backgroundColor: '#130321'
         }}
         onClick={handleBackgroundClick}
       >
