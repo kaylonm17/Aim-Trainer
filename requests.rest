@@ -1,12 +1,12 @@
-GET http://localhost:3000/posts
+GET http://localhost:3001/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNjgxMTgzMTYzfQ.BHGyQzCLFfm8ARGLtwQtK7cTSj_LPO4VMVvuNsKEkUE
+###
+
+GET http://localhost:3001/users
 
 ###
 
-GET http://localhost:3000/users
-
-###
-
-POST http://localhost:3000/users
+POST http://localhost:3001/users
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/users/login
+POST http://localhost:3001/users/login
 Content-Type: application/json
 
 {
@@ -26,9 +26,9 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/login
+POST http://localhost:3001/login
 Content-Type: application/json
 
 {
-    "username": "joe"
+    "username": "Joe"
 }

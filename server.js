@@ -11,7 +11,7 @@ const users = []
 
 const posts = [
     {
-        username: 'Kyle',
+        username: 'Joe',
         title: 'Post 1'
     },
     {
@@ -24,6 +24,7 @@ app.get('/post', authenticateToken, (req, res) => {
 })
 
 app.get('/users', (req, res) => {
+    console.log("hi")
     res.json(users)
 })
 
@@ -78,4 +79,4 @@ function authenticateToken(req, res, next) {
     })
 }
 
-app.listen(3000)
+app.listen(3001)
