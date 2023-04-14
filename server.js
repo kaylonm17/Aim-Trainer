@@ -56,6 +56,10 @@ app.post('/users/login', async (req, res) => {
     }
 
 })
+// get the usename and password from the req.body (the client POST request)
+// get the user out of the database that has the username in req.body
+// take the req.body.password and compare it to the database password using bcrypt.compare
+// if they are the same , log the user in by createing a jwt and sending it back to the client
 
 app.post('/login', (req, res) => {
     // authenticate user
@@ -63,6 +67,7 @@ app.post('/login', (req, res) => {
     const username = req.body.username
     const user = {name: username }
 
+    // example of signing a jwt and sending it back to the client
     const accessToken =jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
     res.json({ accessToken: accessToken })
 })
@@ -79,4 +84,13 @@ function authenticateToken(req, res, next) {
     })
 }
 
+app.post('/signup', (req, res) => {
+    
+    console.log(req.body.signUpPassword)
+    res.json({temporaryData: req.body})
+})
+// take a users email and password
+// encrypt the password using bycrypt
+// save the email and the encrypted password in the database for that user
+// sign a jwt and send it back in the response
 app.listen(3001)
