@@ -59,11 +59,15 @@ const LoginPage = () => {
   }
 
   return (
+    
     <div style={containerStyle}>
+<nav>
       <Navbar />
+      </nav>
       <div style={{ marginTop: '4rem'
      }}>
         <div style={formStyle}>
+        
           <h2>Login Page</h2>
           <form onSubmit={handleSubmit}>
             <label>
@@ -82,7 +86,7 @@ const LoginPage = () => {
         </div>
         {showSignup && (
           <div style={signupStyle}>
-            
+
             <h2>Sign Up</h2>
             <form onSubmit={handleSignup}>
               <label>
