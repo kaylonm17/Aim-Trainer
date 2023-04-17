@@ -169,10 +169,12 @@ function Game1() {
                 textRendering: 'optimizeLegibility',
                 marginBottom: '1rem',
                 fontWeight: 'bold',
-                fontSize: '4rem'
+                fontSize: '3rem'
               }}
             >
-              Ultimate Aim Trainer
+              Welcome Kaylon1 to
+              
+              Ultimate Aim Trainer 
             </h1>
             <div
               ref={containerRef}

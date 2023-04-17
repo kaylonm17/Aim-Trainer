@@ -65,9 +65,7 @@ const LoginPage = () => {
   return (
     
     <div style={containerStyle}>
-<nav>
-      <Navbar />
-      </nav>
+
       <div style={{ marginTop: '4rem'
      }}>
         <div style={formStyle}>
