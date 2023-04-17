@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router
 import AimTrainerPage from './Game1';
 import ReactionTimeTrainerPage from './Game2';
 import { Link } from 'react-router-dom';
+import LoginPage from './LoginPage';
+import Leaderboard from './LeaderBoard';
 
 const Home = () => {
   return <h1>Welcome to the home page</h1>;
@@ -57,6 +59,12 @@ const GameSelectionPage = () => {
           </Route>
           <Route path="/Game2">
             <ReactionTimeTrainerPage />
+          </Route>
+          <Route exact path="/LoginPage">
+          <LoginPage />
+          </Route>
+          <Route exact path="/LeaderBoard">
+          <Leaderboard />
           </Route>
         </Switch>
         <style jsx>{`
