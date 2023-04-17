@@ -10,7 +10,9 @@ function Navbar() {
         <li style={{ marginRight: '20px' }}>
           <Link to="./LoginPage" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2rem', padding: '10px', borderRadius: '5px' }}>Login</Link>
         </li>
-        <li><a href="#" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2rem', padding: '10px', borderRadius: '5px' }}>Leaderboard</a></li>
+        <li style={{ marginRight: '20px' }}>
+          <Link to="./LeaderBoard" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2rem', padding: '10px', borderRadius: '5px' }}>LeaderBoard</Link>
+        </li>
       </ul>
     </nav>
   );

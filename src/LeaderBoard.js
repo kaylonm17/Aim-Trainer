@@ -71,7 +71,7 @@ const Leaderboard = () => {
             </tbody>
           </table>
           <br />
-          <Link to="/GameSelectionPage">
+          <Link to="/">
             <button style={{ borderRadius: '5px', padding: '10px', backgroundColor: 'white', color: '#333' }}>Back to Game Selection</button>
           </Link>
         </div>
