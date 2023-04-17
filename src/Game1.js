@@ -21,7 +21,7 @@ function Target(props) {
   );
 }
 
-function App() {
+function Game1() {
   const [targets, setTargets] = useState([]);
   const [lives, setLives] = useState(3);
   const [score, setScore] = useState(0);
@@ -109,7 +109,6 @@ function App() {
 
   return (
     <div>
-      <NavBar />
       <div
         style={{
           display: 'flex',
@@ -203,4 +202,4 @@ function App() {
     </div>
   );  }
 
-export default App;
+export default Game1;
