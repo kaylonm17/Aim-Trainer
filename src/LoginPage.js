@@ -1,9 +1,9 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 // import GameSelection from './GameSelection';
-import GameSelectionPage from './GameSelection';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -102,18 +102,10 @@ const LoginPage = () => {
                 <input type="password" value={signupPassword} onChange={(event) => setSignupPassword(event.target.value)} />
               </label>
               <br />
-              <Router>
-              <Switch>
-                <Route>
-                <Link to="/GameSelectionPage">
+
+                <Link to="/">
                   <button type="submit">Sign Up</button>
                 </Link>
-                </Route>
-                <Route path="/GameSelectionPage">
-                  <GameSelectionPage />
-                </Route>
-              </Switch>
-              </Router>
             </form>
           </div>
         )}
