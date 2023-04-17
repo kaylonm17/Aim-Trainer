@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import GameSelection from './GameSelection';
+// import GameSelection from './GameSelection';
+import GameSelectionPage from './GameSelection';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -89,8 +90,7 @@ const LoginPage = () => {
         </div>
         {showSignup && (
           <div style={signupStyle}>
-
-            <h2>Sign Up</h2>
+              <h2>Sign Up</h2>
             <form onSubmit={handleSignup}>
               <label>
                 Username:
@@ -105,15 +105,15 @@ const LoginPage = () => {
               <Router>
               <Switch>
                 <Route>
-                <Link to="/GameSelection">
+                <Link to="/GameSelectionPage">
                   <button type="submit">Sign Up</button>
                 </Link>
                 </Route>
-                <Route path="/GameSelection">
-                  <GameSelection />
+                <Route path="/GameSelectionPage">
+                  <GameSelectionPage />
                 </Route>
               </Switch>
-            </Router>
+              </Router>
             </form>
           </div>
         )}
