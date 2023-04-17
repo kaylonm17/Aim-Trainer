@@ -5,18 +5,21 @@ import Navbar from './Navbar';
 const Leaderboard = () => {
   // Sample data for the leaderboard
   const [scores, setScores] = useState([
-    { name: 'Player 1', score: 100 },
-    { name: 'Player 2', score: 80 },
-    { name: 'Player 3', score: 70 },
-    { name: 'Player 4', score: 60 },
-    { name: 'Player 5', score: 50 },
+    { name: 'matt23', score: 50 },
+    { name: 'Kaylon1', score: 30 },
+    { name: 'matt23', score: 5 },
+    { name: 'matt23', score: 5 },
+  ]);
+  const [scores2, setScores2] = useState([
+    { name: 'matt23', score: 214 },
+    { name: 'matt23', score: 252 },
+    { name: 'matt23', score: 261 },
   ]);
 
   const containerStyle = {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'flex-start',
     minHeight: '100vh',
     background: 'url(https://static.vecteezy.com/system/resources/previews/005/266/448/original/retro-futuristic-background-free-vector.jpg)',
     backgroundSize: 'cover',
@@ -29,6 +32,8 @@ const Leaderboard = () => {
     boxShadow: '0 0.5rem 1rem rgba(0,0,0,0.1)',
     borderRadius: '1rem',
     padding: '3rem',
+    marginRight: '2rem',
+    marginTop: '3rem'
   };
 
   const rowStyle = {
@@ -46,17 +51,14 @@ const Leaderboard = () => {
 
   return (
     <div style={containerStyle}>
-      <nav>
-        <Navbar />
-      </nav>
       <div style={{ marginTop: '4rem' }}>
         <div style={tableStyle}>
-          <h2>Leaderboard</h2>
+          <h2>Aim trainer Top-5</h2>
           <table>
             <thead>
               <tr style={headerStyle}>
-                <th>Rank</th>
-                <th>Name</th>
+                <th>Rank---</th>
+                <th>Name---</th>
                 <th>Score</th>
               </tr>
             </thead>
@@ -70,9 +72,30 @@ const Leaderboard = () => {
               ))}
             </tbody>
           </table>
+        </div>
+        <div style={tableStyle}>
+          <h2>Reaction Time Top-3</h2>
+          <table>
+            <thead>
+              <tr style={headerStyle}>
+                <th>Rank---</th>
+                <th>Name---</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scores2.map((score, index) => (
+                <tr key={index} style={rowStyle}>
+                  <td>{index + 1}</td>
+                  <td>{score.name}</td>
+                  <td>{score.score}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
           <br />
           <Link to="/">
-            <button style={{ borderRadius: '5px', padding: '10px', backgroundColor: 'white', color: '#333' }}>Back to Game Selection</button>
+            <button style={{ borderRadius: '5px', padding: '10px', backgroundColor: 'white', color: '#333', marginLeft: '25px' }}>Back to Game Selection</button>
           </Link>
         </div>
       </div>

@@ -44,7 +44,22 @@ function Game2() {
         backgroundPosition: 'center',
         flexDirection: 'column'
       }}
+      
     >
+       <h1
+              style={{
+                color: 'white',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                textRendering: 'optimizeLegibility',
+                marginBottom: '1rem',
+                fontWeight: 'bold',
+                fontSize: '1.5rem'
+              }}
+            >
+              Welcome Kaylon1 to
+              
+              Reaction Time Trainer 
+            </h1>
       {!started && (
         <button style={{
             background: 'linear-gradient(180deg, #ff2a2a 0%, #e54d4d 100%)',
@@ -72,7 +87,7 @@ function Game2() {
           Start
         </button>
       )}
-      {started && !showBox && <p>Get ready...</p>}
+      {/* {started && !showBox && <p>Get ready...</p>} */}
       {started && showBox && (
         <div
           style={{
@@ -85,7 +100,7 @@ function Game2() {
         />
       )}
       {reactionTime && (
-        <div style={{ marginTop: '20px', color: 'white' }}>
+        <div style={{ marginTop: '20px', color: 'white', fontSize: '1.5rem' }}>
           <p>Your reaction time: {reactionTime}ms</p>
           <button style={{
             background: 'linear-gradient(180deg, #ff2a2a 0%, #e54d4d 100%)',
