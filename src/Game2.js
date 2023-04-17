@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-function Game2() {
+function App() {
   const [started, setStarted] = useState(false);
   const [showBox, setShowBox] = useState(false);
   const [startTime, setStartTime] = useState(null);
@@ -116,4 +116,4 @@ function Game2() {
   );
 }
 
-export default Game2;
+export default App1;
